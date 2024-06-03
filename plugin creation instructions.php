@@ -125,6 +125,7 @@ Create a plugin_file.json file to register your plugin with cPanel:
 
 {
   "id": "varnish_cache_flusher",
+  "entry": "flush_varnish.php",
   "name": "Varnish Cache Flusher",
   "description": "Flush Varnish cache for user websites.",
   "pluginType": "cjt",
