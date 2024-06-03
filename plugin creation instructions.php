@@ -145,6 +145,37 @@ Create a plugin_file.json file to register your plugin with cPanel:
   }
 }
 
+Create an Install.json File:
+The install.json should contain the metadata required by cPanel to recognize and install the plugin. Here's a basic example:
+
+{
+    "id": "varnish_cache_flusher",
+    "version": "1.0",
+    "name": "Varnish Cache Flusher",
+    "description": "A plugin to flush Varnish cache",
+    "icon": "icon.png",
+    "featuremanager": {
+        "vars": {
+            "group": "Varnish Tools",
+            "features": [
+                "flush_varnish_cache"
+            ]
+        }
+    },
+    "entry": {
+        "url": "flush_varnish.php",
+        "require": "module=Security",
+        "displayname": "Flush Varnish Cache"
+    }
+    "pluginType": "cjt",
+    "requiredFeatures": [],
+    "run": {
+    "type": "application",
+    "command": "/usr/local/cpanel/base/frontend/jupiter/varnish_cache_flusher/varnish_cache_flusher.live.php"
+  }
+}
+
+
 6. Register the Plugin with cPanel
 
 Finally, register the plugin with cPanel:
