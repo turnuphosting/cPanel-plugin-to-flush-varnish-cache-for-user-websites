@@ -166,13 +166,13 @@ The install.json should contain the metadata required by cPanel to recognize and
         "url": "flush_varnish.php",
         "require": "module=Security",
         "displayname": "Flush Varnish Cache"
-    }
+    },
     "pluginType": "cjt",
     "requiredFeatures": [],
     "run": {
-    "type": "application",
-    "command": "/usr/local/cpanel/base/frontend/jupiter/varnish_cache_flusher/varnish_cache_flusher.live.php"
-  }
+        "type": "application",
+        "command": "/usr/local/cpanel/base/frontend/jupiter/varnish_cache_flusher/varnish_cache_flusher.live.php"
+    }
 }
 
 
