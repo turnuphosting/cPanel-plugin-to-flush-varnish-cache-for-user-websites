@@ -182,6 +182,25 @@ Finally, register the plugin with cPanel:
 
 /usr/local/cpanel/scripts/install_plugin /usr/local/cpanel/base/frontend/jupiter/varnish_cache_flusher/varnish_cache_flusher.live.php --theme jupiter
 
+Set Correct Permissions:
+# Run the command below.
+chown -R root:root /usr/local/cpanel/base/frontend/jupiter/varnish_cache_flusher
+chmod 644 /usr/local/cpanel/base/frontend/jupiter/varnish_cache_flusher/*
+
+Install the Plugin:
+# Run the command below.
+/usr/local/cpanel/scripts/install_plugin /usr/local/cpanel/base/frontend/jupiter/varnish_cache_flusher --theme jupiter
+
+Rebuild Sprites and API:
+# Run the command below.
+/usr/local/cpanel/bin/rebuild_sprites
+/usr/local/cpanel/bin/rebuild_apache_conf
+
+Restart cPanel services:
+# Run the command below.
+/scripts/restartsrv_cpsrvd
+
+
 7. Verify the Installation
 
 Log in to your cPanel account and navigate to the Jupiter theme interface. You should see the "Varnish Cache Flusher" icon. Click it to flush the Varnish cache for your websites.
