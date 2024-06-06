@@ -1,0 +1,12 @@
+{
+    "id": "varnish_cache_flusher",
+    "name": "Varnish Cache Flusher",
+    "description": "A plugin to flush Varnish cache",
+    "icon": "transparent_placeholder_icon.png",
+    "featuremanager":1, 
+    "feature":"flush_varnish_cache",
+    "group_id": "advanced",
+    "order":"10",
+    "uri":"varnish_cache_flusher/varnish_cache_flusher.live.php",
+    "type":"link"
+}
